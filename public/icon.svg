@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#4338ca" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="docGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Background Document Layer (underneath) -->
+  <g transform="translate(185, 95) rotate(10)" opacity="0.3">
+    <rect width="180" height="250" rx="16" fill="#ffffff" />
+  </g>
+
+  <!-- Main Document (with shadow) -->
+  <g filter="url(#shadow)">
+    <!-- Base Document Card -->
+    <path d="M 140 100 
+             L 290 100 
+             L 372 182 
+             L 372 400 
+             A 20 20 0 0 1 352 420 
+             L 160 420 
+             A 20 20 0 0 1 140 400 
+             Z" fill="url(#docGrad)" />
+
+    <!-- Folded Corner -->
+    <path d="M 290 100 
+             L 290 162 
+             A 20 20 0 0 0 310 182 
+             L 372 182 
+             Z" fill="#cbd5e1" />
+  </g>
+
+  <!-- Red PDF / Doc Badge -->
+  <rect x="175" y="190" width="80" height="34" rx="8" fill="#ef4444" />
+  <text x="215" y="213" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="18" text-anchor="middle" letter-spacing="1">PDF</text>
+
+  <!-- Document Lines -->
+  <rect x="175" y="245" width="162" height="14" rx="7" fill="#64748b" />
+  <rect x="175" y="275" width="130" height="14" rx="7" fill="#94a3b8" />
+  <rect x="175" y="305" width="150" height="14" rx="7" fill="#cbd5e1" />
+
+  <!-- Lightning / Fast Processing Stamp Floating Icon -->
+  <circle cx="340" cy="355" r="48" fill="url(#accentGrad)" filter="url(#shadow)" />
+  <path d="M 338 322 L 316 358 L 336 358 L 332 388 L 362 348 L 342 348 Z" fill="#ffffff" />
+</svg>
